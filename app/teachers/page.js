@@ -13,13 +13,13 @@ export default async function Teachers() {
     <section className="teacher">
       <div className="parent-card">
         {teachers.map((teacher) => {
-          const { image, name, subject, _id } = teacher;
+          const { image, name, courses, _id } = teacher;
           return (
             <Link href="/" className="teachers-card" key={_id}>
-              <img src={urlFor(image).fit('max').width(200).url()} alt={name} />
+              <img src={image} alt={name} />
               <div className="teachers-desc">
                 <h4>{name}</h4>
-                <p>{subject}</p>
+                <p>{courses}</p>
               </div>
               <div className="teachers-icons">
                 <div className="div">

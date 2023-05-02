@@ -5,11 +5,8 @@ export default {
   fields: [
     {
       name: 'image',
-      type: 'image',
+      type: 'url',
       title: 'Image',
-      options: {
-        hotspot: true,
-      },
     },
     {
       name: 'name',
@@ -19,7 +16,7 @@ export default {
     {
       name: 'age',
       title: 'Age',
-      type: 'number',
+      type: 'string',
     },
     {
       name: 'gender',
@@ -27,8 +24,8 @@ export default {
       type: 'string',
     },
     {
-      name: 'address',
-      title: 'Address',
+      name: 'parentName',
+      title: 'Parent Name',
       type: 'string',
     },
     {
@@ -38,18 +35,8 @@ export default {
     },
     {
       name: 'department',
-      type: 'object',
-      fields: [
-        {
-          name: 'dept',
-          title: 'Department',
-          type: 'reference',
-          to: {type: 'department'},
-          options: {
-            sort: {order: 'ASC', fields: ['name']},
-          },
-        },
-      ],
+      title: 'Department',
+      type: 'string',
     },
   ],
 }

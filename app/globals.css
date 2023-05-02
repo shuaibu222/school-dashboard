@@ -366,7 +366,8 @@ main {
 }
 
 .add-modal-content form input,
-textarea {
+textarea,
+select {
   width: 100%;
   font-size: 0.9rem;
   padding: 0.8rem;
@@ -402,6 +403,7 @@ textarea:focus {
 
 .teachers-card img {
   width: 6rem;
+  height: 6rem;
   border-radius: 50%;
 }
 
@@ -436,7 +438,13 @@ textarea:focus {
 
 /* students styles */
 
-/* chat styles */
+table {
+  /* border-collapse: collapse; */
+  padding: 2rem;
+  overflow-x: scroll;
+}
+
+/* animations style */
 
 /* spinner style */
 

@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: 'image',
-      type: 'image',
+      type: 'url',
       title: 'Image',
     },
     {
@@ -14,9 +14,24 @@ export default {
       title: 'Name',
     },
     {
-      name: 'subject',
+      name: 'title',
       type: 'string',
-      title: 'Subject',
+      title: 'Title',
+    },
+    {
+      name: 'about',
+      type: 'string',
+      title: 'about',
+    },
+    {
+      name: 'courses',
+      type: 'string',
+      title: 'Courses',
+    },
+    {
+      name: 'degree',
+      type: 'string',
+      title: 'Degree',
     },
     {
       name: 'phone',
@@ -24,9 +39,20 @@ export default {
       title: 'Phone',
     },
     {
+      name: 'address',
+      type: 'string',
+      title: 'Address',
+    },
+
+    {
       name: 'email',
       type: 'string',
       title: 'Email',
+    },
+    {
+      name: 'experience',
+      type: 'string',
+      title: 'Experience',
     },
   ],
 }
