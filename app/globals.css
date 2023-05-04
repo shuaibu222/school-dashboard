@@ -55,7 +55,9 @@ img {
   height: auto;
 }
 p,
-a {
+a,
+td,
+th {
   font-size: 0.9rem;
 }
 
@@ -439,9 +441,31 @@ textarea:focus {
 /* students styles */
 
 table {
-  /* border-collapse: collapse; */
-  padding: 2rem;
+  table-layout: fixed;
+  border-collapse: collapse;
   overflow-x: scroll;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: var(--second-color);
+}
+
+table th,
+td {
+  display: flex;
+  color: var(--text-dark);
+  padding: 0.8rem;
+  border-bottom: 1px solid var(--first-color);
+}
+table th {
+  border-bottom: 1px solid var(--fourth-color);
+  color: var(--text-light);
+}
+
+tbody img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
 }
 
 /* animations style */
