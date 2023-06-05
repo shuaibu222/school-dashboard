@@ -8,17 +8,23 @@ import { IoIosNotificationsOutline } from 'react-icons/io';
 import { BiMessageDetail } from 'react-icons/bi';
 
 export default function Navigation() {
-  const { showMenu, setShowMenu } = useContext(MyContext);
+  const { setIsSidebarOpen, isSidebarOpen } = useContext(MyContext);
 
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
+  const hideSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+    console.log('test');
   };
+
   return (
     <header>
       <nav className="nav">
         <div className="nav-first-row">
-          <div className="nav-icons" onClick={toggleMenu}>
-            <RxHamburgerMenu className="hamburger icons" />
+          <div className="nav-icons">
+            {' '}
+            <RxHamburgerMenu
+              className="hamburger icons"
+              onClick={hideSidebar}
+            />
           </div>
           <form>
             <input

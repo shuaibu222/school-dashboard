@@ -19,17 +19,22 @@ export const metadata = {
 const poppins = Poppins({ subsets: ['devanagari'], weight: '400' });
 
 export default function RootLayout({ children }) {
-  const [showMenu, setShowMenu] = useState(true);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
   return (
     <html lang="en">
-      <MyContext.Provider value={{ showMenu, setShowMenu }}>
+      <MyContext.Provider value={{ setIsSidebarOpen, isSidebarOpen }}>
         <body className={poppins.className}>
-          <section className="side">
+          <Aside />
+          {/*  */}
+          <section
+            className={`side ${
+              isSidebarOpen ? 'side-active' : 'side-not-active'
+            }`}
+          >
             <Navigation />
             {children}
           </section>
-          <Aside />
         </body>
       </MyContext.Provider>
     </html>
